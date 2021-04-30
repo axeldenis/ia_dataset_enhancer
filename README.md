@@ -7,7 +7,7 @@ So this is the main idea of this program, applying filters or transformations to
 ![example of transformations](https://cdn.discordapp.com/attachments/707337308994535457/837654372103749682/unknown.png)
 
 For each image in the source folder, the programm will create 8 news images :
-The original image just resized (400x400, *but you can change it line 18*) (all other images will be resized too)
+The original image just resized (400x400, *but you can change it line 17*) (all other images will be resized too)
 An image with random noise above it
 5 images randomly rotated
 And one image flipped on the X axis
