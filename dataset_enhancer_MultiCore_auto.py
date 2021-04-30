@@ -1,4 +1,4 @@
-import numpy as np
+from numpy import fliplr
 import matplotlib.image as mpimg
 import matplotlib.pyplot as plt
 import random
@@ -14,7 +14,6 @@ from multiprocessing import Pool
 # We will use Pool to open a function in many cores of our CPU with a list of arguments (core1 will have the first argument, core 2 the 2nd...)
 
 cpus = os.cpu_count()
-print("Your CPU have",cpus,"cores.")
 imgSize = (400,400) # Size (x,y) of the news images created
 
 
@@ -51,7 +50,7 @@ def processImages(images):
         img_nos = random_noise(img_rescale, mode="s&p", clip=True)
 
         # Vertical flip 
-        vertFlip = np.fliplr(img_rescale)
+        vertFlip = fliplr(img_rescale)
 
         # Sauvegarde toutes les variantes de l'image dans son emplacement miroir
         mpimg.imsave(dossierOutput+nom_actuel, img_rescale)
@@ -61,7 +60,7 @@ def processImages(images):
     print("endThread")
         
 if __name__ == '__main__': # We will do that only if we are the main program (prevent threads to launch threads the recursive way)
-
+    print("Your CPU have",cpus,"cores.")
     # Taking the list of images
     dossier_training = glob(input("nom du dossier : ") + "/*")
 
