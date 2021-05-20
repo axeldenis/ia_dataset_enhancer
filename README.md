@@ -16,5 +16,5 @@ And one image flipped on the X axis
 This program is designed to take advantage of all the cores of your CPU, it will detect this number automaticaly and launch one thread by core with the multiprocessing python library. *You can change the number of cores used line 16.*
 By example if your CPU have 8 cores, it will proceed 8 images simultaneously !
 
-**Crédits :**
+**Credits :**
 The original idea for this program and the original image processing program was from my friend Ilan Mayeux. Optimisation and multiprocessing implementation is from me :D
